@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Envío</title>
+    <link rel="stylesheet" href="css/estilosDireccionEnvio.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="shippingForm">
+            <fieldset>
+                <legend>DIRECCION DE ENVIO</legend>
+                <div class="form-group">
+                    <label for="mainStreet">Calle Principal</label>
+                    <input type="text" id="mainStreet" name="mainStreet">
+                </div>
+                
+                <div class="form-group">
+                    <label for="crossStreet">Transversal</label>
+                    <input type="text" id="crossStreet" name="crossStreet">
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="ownerDelivery" name="deliveryOption">
+                    <label for="ownerDelivery">Entrega al propietario.</label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="thirdPartyDelivery" name="deliveryOption">
+                    <label for="thirdPartyDelivery">Entrega a un tercero.</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cantons">Cantones:</label>
+                    <select id="cantons" name="cantons">
+                        <option value="quito">Quito</option>
+                        <option value="guayaquil">Guayaquil</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="machachi">Machachi</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" id="submitBtn" class="button" disabled>ENVIAR DATOS</button>
+                </div>
+            </fieldset>
+        </form>
+        
+        <form id="confidentialInfoForm" style="display:none;">
+            <fieldset>
+                <legend>INFORMACIÓN CONFIDENCIAL</legend>
+                <div class="form-group">
+                    <label for="postalCode" id="postalCodeLabel">Código Postal:</label>
+                    <input type="text" id="postalCode" name="postalCode">
+                </div>
+                
+                <div class="form-group">
+                    <label for="addressReference">Referencia de la Dirección:</label>
+                    <textarea id="addressReference" name="addressReference"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" class="button">Guardar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

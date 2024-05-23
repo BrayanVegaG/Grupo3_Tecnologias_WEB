@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="css/estilosContacto.css">
+</head>
+<body>
+    <div class="form-container">
+        <form name="FormContacto" onsubmit="return validar()">
+            <fieldset>
+                <legend> <b>Contacto</b></legend >
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="usuario@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="fechaNacimiento"> <span></span>Fecha de Nacimiento</label>
+                    <input type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="button" value="Enviar" onclick="deshabilitarBoton(this)">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

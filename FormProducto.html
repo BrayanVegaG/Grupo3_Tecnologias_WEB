@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="/css/estilosDireccionEnvio.css">
+</head>
+<body>
+    <div class="form-container">
+        <form name="FormProducto">
+            <fieldset>
+                <legend>Datos Básicos</legend>
+                <div class="form-group">
+                    <label for="nombreProducto" id="nombreLabel">Nombre del Producto:</label>
+                    <input type="text" id="nombre" name="nombreProducto">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="foto">Foto:</label>
+                    <input type="file" id="foto" name="foto">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confidencial" name="confidencial">
+                    <label for="confidencial">Añadir información confidencial</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos Económicos</legend>
+                <div class="form-group">
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="impuestos">Impuestos:</label>
+                    <select id="impuestos" name="impuestos">
+                        <option value="0">0%</option>
+                        <option value="4">4%</option>
+                        <option value="10">10%</option>
+                        <option value="21">21%</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Promoción:</label>
+                    <div>
+                        
+                        <label for="ninguno"> <input type="radio" id="ninguno" name="promocion" value="ninguno"> Ninguno</label>
+                    </div>
+                    <div>
+                        
+                        <label for="transporte"><input type="radio" id="transporte" name="promocion" value="transporte">Transporte Gratuito</label>
+                    </div>
+                    <div>
+                        
+                        <label for="descuento"><input type="radio" id="descuento" name="promocion" value="descuento">Descuento 5%</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="submit" class="button">Guardar Cambios</button>
+                <button type="reset" class="button">Borrar los datos introducidos</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
